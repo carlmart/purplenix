@@ -4,17 +4,31 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>PurpleNix</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
+    <script>
+    window.Running = {
+    Models: {},
+    Collections: {},
+    Views: {},
+    Routers: {},
+    init: function () {
+        this.app = new this.Routers.App();
+     }
+    };
+
+    $(document).ready(function () {
+    'use strict';
+    Running.init();
+    });
+
+    </script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <style>
 
-body { background:#9BB4FF url(images/bluewave.jpeg) repeat-x; margin:1; }
+   body { background:#9BB4FF url(images/bluewave.jpeg) repeat-x; margin:1; }
 #pw1 { background-image:url(images/bluewave.jpeg); background-position:center top; background-repeat:repeat-y; }
 #pw2 { background-image:url(images/bluewave.jpeg); background-position:center top; background-repeat:no-repeat; text-align:center; }
 #pw3 { width:776px; margin:0px auto; padding:30 0 23 0; background-image:url(images/bluewave.jpeg); background-position:center bottom; background-repeat:no-repeat; text-align:left; }
@@ -233,7 +247,7 @@ body { background:#9BB4FF url(images/bluewave.jpeg) repeat-x; margin:1; }
    Research and Development
  </p>
 <p>
-  <a href="https://purplenix.youcanbook.me/index.jsp" target_"blank">  Consultations $60/hour </a><Br>
+  <a href="https://purplenix.youcanbook.me/index.jsp" target_"blank">  Bookme for Consultations </a><Br>
    And yes, I can manage your downed Linux / Unix / Solaris server at all hours of the night, including weekends. <br>
    Software development , shell scripting and automation using various languages. Integration and High Availability 
 setups for Solaris / Linux and Windows available.
@@ -242,9 +256,7 @@ setups for Solaris / Linux and Windows available.
 
 </p>
 
-<p><img src="chart.png" width="590" alt="Image" /></p>
 
-<h3>ImageTag v.01</h3>
 
 <p>We're currently working on  <a href="https://purplenix.visualstudio.com" target="_blank">QT-creator on Visual Studio</a> and another one for Linux.</p>
 It's an opensource Image Viewer and Photography tagger. Makes it easy for photographers to search their pics and find images by key words.
